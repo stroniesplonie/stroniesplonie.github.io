@@ -16,8 +16,9 @@
           }
 
           body {
-               background: url('background.jpg') no-repeat center center fixed;
+               background: url(background.jpg) no-repeat center center fixed;
                text-align: center;
+               height: 200vh;
           }
 
           #link:link,
@@ -44,12 +45,12 @@
 
           #front {
                height: 100vh;
-               padding-top: 7%;
+               padding-top: 10%;
                padding-bottom: 7%;
           }
 
           #back {
-               height: 100vh;
+               height: 90vh;
                padding-top: 7%;
                padding-bottom: 7%;
           }
@@ -57,6 +58,13 @@
           p {
                font-size: 30px;
           }
+
+          #creator {
+               font-size: 15px;
+               text-align: right;
+               transform: translate(0px, 200px);
+          }
+
      </style>
 </head>
 
@@ -74,6 +82,7 @@
                <p style="font-size:20px"><i>Mała podpowiedź: jest ich 10, w kolorach zielonym, niebieskim i czerwonym.</i></p>
                <p>Powodzenia!</p>
                <a href="p1.html" id="link">Zaczynajmy!</a>
+               <p id="creator">Web developer: FraPla</p>
           </div>
      </div>
 </body>
