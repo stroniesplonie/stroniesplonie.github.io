@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <link rel="icon" href="favi.jpg" type="image/jpg" sizes="16x16">
+    <meta charset="UTF-8" />
+    <title>Biblioteka Publiczna w Łukowicy</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff2e6;
+        }
+
+        a {
+            margin: 20px;
+        }
+
+        a:link,
+        a:visited {
+            border: 2px black solid;
+            background-color: #800000;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        a:hover,
+        a:active {
+            background-color: #4d0000;
+        }
+
+        #next {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="po3.html" id="back">Cofnij</a>
+    <a href="po5.html" id="next">Dalej</a>
+    <div style="width:100%;">
+        <img id="img_ID" src="pokoj4.jpg" usemap="#map" border="0" width="100%" alt="" />
+    </div>
+
+    <map id="map_ID" name="map">
+        <area shape="poly" coords="537,1127,563,1118,580,1133,539,1144" href="zagadka 6.pdf" target="_blank">
+        <area shape="poly" coords="1498,354,1510,355,1510,373,1506,373,1503,427,1497,427" href="zagadka 7.pdf" target="_blank">
+    </map>
+    <script>
+        window.onload = function () {
+            var ImageMap = function (map, img) {
+                var n,
+                    areas = map.getElementsByTagName('area'),
+                    len = areas.length,
+                    coords = [],
+                    previousWidth = 2420;
+                for (n = 0; n < len; n++) {
+                    coords[n] = areas[n].coords.split(',');
+                }
+                this.resize = function () {
+                    var n, m, clen,
+                        x = img.offsetWidth / previousWidth;
+                    for (n = 0; n < len; n++) {
+                        clen = coords[n].length;
+                        for (m = 0; m < clen; m++) {
+                            coords[n][m] *= x;
+                        }
+                        areas[n].coords = coords[n].join(',');
+                    }
+                    previousWidth = img.offsetWidth;
+                    return true;
+                };
+                window.onresize = this.resize;
+            },
+                imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
+            imageMap.resize();
+            return;
+        }
+    </script>
+</body>
+
+</html>
