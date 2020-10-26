@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memory Game</title>
+    <meta charset="UTF-8">
+
+    <style>
+        div {
+            width: 20vh;
+            height: 20vh;
+            display: inline-block;
+            background-size: cover;
+        }
+
+        #home,
+        #demo {
+            width: 100vh;
+        }
+
+        .back {
+            display: none;
+        }
+
+        #btn,
+        #bn {
+            background-color: #f44336;
+            border: 1px solid #741009;;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        #btn:hover,
+        #bn:hover {
+            background-color: #c93126;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home">
+        <section id="demo">
+            <h1>Gra Memory</h1>
+            <p id="jaki">Jaki czas do zapamiętania wybierasz?</p>
+            <input type="number" id="czas" name="czas" style="display: block; font-size: 20px;" value="5" placeholder="sekundy">
+            <button id='btn' style='font-size: 20px;'>START</button>
+            <button id='bn' style='display: none; font-size: 20px;' onclick='window.location.reload();'>RESTART</button>
+            <div id='0' style='display: "none";'></div>
+            <div id='1' style='display: "none";'></div>
+            <div id='2' style='display: "none";'></div>
+            <div id='3' style='display: "none";'></div>
+            <div id='4' style='display: "none";'></div>
+            <div id='5' style='display: "none";'></div>
+            <div id='6' style='display: "none";'></div>
+            <div id='7' style='display: "none";'></div>
+            <div id='8' style='display: "none";'></div>
+            <div id='9' style='display: "none";'></div>
+            <div id='10' style='display: "none";'></div>
+            <div id='11' style='display: "none";'></div>
+            <div id='12' style='display: "none";'></div>
+            <div id='13' style='display: "none";'></div>
+            <div id='14' style='display: "none";'></div>
+            <div id='15' style='display: "none";'></div>
+        </section>
+    </div>
+
+    <script src="js.js"></script>
+
+</body>
+
+</html>
